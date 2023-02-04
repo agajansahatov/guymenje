@@ -112,3 +112,17 @@ a {
     width: 1.8rem;
   }
 }
+
+
+/* Collapsibles */
+.collapsible__content {
+  max-height: 0;;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
