@@ -74,6 +74,29 @@ p {
   }
 }
 
+/* Icons */
+.icon{
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary{
+  fill: var(--color-primary);
+}
+
+.icon--accent{
+  fill: var(--color-accent);
+}
+
+.icon-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  background: #f3f9fa;
+}
 
 /* Links */
 a {
@@ -94,7 +117,6 @@ a {
   height: 2.2rem;
   width: 2.2rem;
   margin-left: 5px;
-  fill: var(--color-accent);
   transition: margin 0.15s;
 }
 
