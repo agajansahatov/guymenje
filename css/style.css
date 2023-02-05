@@ -171,7 +171,7 @@ a {
   align-items: center;
   flex-wrap: wrap;
   padding: 1rem;
-  border-bottom: 0.3px solid #222;
+  border-bottom: 1px solid #222;
 }
 
 .nav__list {
@@ -194,7 +194,7 @@ a {
   transition: color .3s;
 }
 
-.nav__item > a:hover{
+.nav__item > a:hover {
   color: #fff;
 }
 
@@ -211,26 +211,26 @@ a {
   opacity: 1;
 }
 
-.nav.collapsible--expanded .nav__toggler{
+.nav.collapsible--expanded .nav__toggler {
   opacity: 1;
   border: 2px solid #fff;
 }
 
-.nav.collapsible--expanded .nav__toggler:hover{
+.nav.collapsible--expanded .nav__toggler:hover {
   box-shadow: 0 0 3px 3px #666;
 }
 
-.nav__header{
+.nav__header {
   display: inline-flex;
 } 
-.nav__header .logo{
+.nav__header .logo {
   height: 40px;
   margin: 0;
   margin-left: 3px;
   clip-path: inset(0 62% 0 0);
 }
 
-.nav__header .logo-text{
+.nav__header .logo-text {
   align-self: center;
   font-size: 21px;
   letter-spacing: 1px;
@@ -240,11 +240,11 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .nav__toggler{
+  .nav__toggler {
     display: none;
   }
 
-  .nav__list{
+  .nav__list {
     width: auto;
     display: flex;
     font-size: 1.8rem;
@@ -252,7 +252,7 @@ a {
     opacity: 1;
   }
 
-  .nav__item{
+  .nav__item {
     border: 0;
     padding: 1rem 2rem;
   }
@@ -261,13 +261,75 @@ a {
     padding-right: 1rem;
   }
 
-  .nav__header .logo{
+  .nav__header .logo {
     clip-path: inset(0 0 0 0);
   }
   
-  .nav__header .logo-text{
+  .nav__header .logo-text {
     display: none;
   }
 }
 
+/* Buttons */
 
+.btn {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  border: 0;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 1rem 0;
+}
+
+.btn--outline {
+  background: #fff;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+
+.btn--outline:hover {
+  background: var(--color-headings);
+  color: #fff;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #006fff;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: #00c8eb;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover{
+  background: #ec3000;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
