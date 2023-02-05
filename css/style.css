@@ -170,8 +170,27 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 1.2rem;
   border-bottom: 1px solid #222;
+}
+
+.nav__header {
+  display: inline-flex;
+} 
+.nav__header .logo {
+  height: 45px;
+  margin: 0;
+  margin-left: 3px;
+  clip-path: inset(0 62% 0 0);
+}
+
+.nav__header .logo-text {
+  align-self: center;
+  font-size: 21px;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0px 0 0 -85px;
+  padding: 0;
 }
 
 .nav__list {
@@ -220,26 +239,10 @@ a {
   box-shadow: 0 0 3px 3px #666;
 }
 
-.nav__header {
-  display: inline-flex;
-} 
-.nav__header .logo {
-  height: 40px;
-  margin: 0;
-  margin-left: 3px;
-  clip-path: inset(0 62% 0 0);
-}
-
-.nav__header .logo-text {
-  align-self: center;
-  font-size: 21px;
-  letter-spacing: 1px;
-  color: #fff;
-  margin: 0px 0 0 -75px;
-  padding: 0;
-}
-
 @media screen and (min-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
   .nav__toggler {
     display: none;
   }
@@ -262,6 +265,7 @@ a {
   }
 
   .nav__header .logo {
+    height: 40px;
     clip-path: inset(0 0 0 0);
   }
   
@@ -349,4 +353,23 @@ a {
 
 .media__image{
   margin-top: 1rem;
+}
+
+/* Grids */
+.grid{
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    /* Divide into 2 and give each child 1 slice */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    /* Divide into 2 and give each child 1 slice */
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
