@@ -16,6 +16,7 @@
 }
 
 
+
 /* Typography */
 ::selection {
   background: var(--color-primary);
@@ -95,6 +96,7 @@ p {
 }
 
 
+
 /* Icons */
 .icon {
   width: 40px;
@@ -124,6 +126,7 @@ p {
 }
 
 
+
 /* Lists */
 .list {
   list-style: none;
@@ -131,6 +134,7 @@ p {
   margin: 0;
   color: inherit;
 }
+
 
 
 /* Links */
@@ -172,6 +176,7 @@ a {
 }
 
 
+
 /* Collapsibles */
 .collapsible__content {
   max-height: 0;;
@@ -184,6 +189,7 @@ a {
   max-height: 100vh;
   opacity: 1;
 }
+
 
 
 /* Navigation Bar */
@@ -296,8 +302,9 @@ a {
   }
 }
 
-/* Buttons */
 
+
+/* Buttons */
 .btn {
   font-size: 1.4rem;
   font-weight: 600;
@@ -375,6 +382,8 @@ a {
   }
 }
 
+
+
 /* Media */
 .media {
   display: flex;
@@ -391,6 +400,59 @@ a {
 .media__image{
   margin-top: 1rem;
 }
+
+
+
+/* Quotes */
+.quote {
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--color-body-darker);
+  line-height: 1.3;
+}
+
+.quote__text::before{
+  content: open-quote;
+}
+
+.quote__text::after{
+  content: close-quote;
+}
+
+.quote__author {
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+.quote__company {
+  color: var(--color-headings);
+  opacity: .4;
+  font-size: 2rem;
+  font-style: normal;
+}
+
+.quote__line {
+  position: relative;
+  bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+
+  .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .quote__company {
+    font-size: 1.6rem;
+  }
+}
+
+
 
 /* Grids */
 .grid{
@@ -410,6 +472,8 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
 
 /* Blocks */
 .block {
@@ -456,6 +520,8 @@ a {
   }
 }
 
+
+
 /* Banner */
 .banner {
   clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
@@ -491,3 +557,4 @@ a {
     min-height: 96vh;
   }
 }
+
