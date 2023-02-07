@@ -29,23 +29,39 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<!-- Remove this first div, that was just a temporary thing -->
-		<div style="width: 40%; padding: 3rem">
-			<div class="card card--primary">
-				<header class="card__header">Card Title</header>
-				<div class="card__body">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Quos optio tempora saepe omnis aliquid dolore!
+		<div class="card testimonial">
+			<div class="grid grid--1x2">
+				<div class="testimonial__image">
+					<img
+						src="assets/images/testimonial.jpg"
+						alt="A happy, smiling customer"
+					/>
+					<span class="icon-container icon-container--accent">
+						<svg class="icon icon--white icon--small">
+							<use xlink:href="assets/sprite.svg#quotes"></use>
+						</svg>
+					</span>
 				</div>
-			</div>
-		</div>
-		<div style="width: 40%; padding: 3rem">
-			<div class="card card--secondary">
-				<header class="card__header">Card Title</header>
-				<div class="card__body">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Quos optio tempora saepe omnis aliquid dolore!
-				</div>
+				<blockquote class="quote">
+					<p class="quote__text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Non omnis assumenda fugit fugiat explicabo, et nostrum
+						consequatur molestias sunt excepturi.
+					</p>
+					<div class="media">
+						<div class="media__image">
+							<svg class="icon icon--primary quote__line">
+								<use xlink:href="assets/sprite.svg#line"></use>
+							</svg>
+						</div>
+						<div class="media__body">
+							<h3 class="media__title quote__author">
+								John Smith
+							</h3>
+							<p class="quote__company">ABC Company</p>
+						</div>
+					</div>
+				</blockquote>
 			</div>
 		</div>
 		<script src="js/index.js"></script>
