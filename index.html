@@ -29,43 +29,218 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<nav class="navbar collapsible">
-			<a class="nav__header" href="/">
-				<img class="logo" src="assets/logo-dark.svg" alt="" />
-				<p class="logo-text">Güýmenje</p>
-			</a>
-			<svg class="icon icon--white collapsible__toggler nav__toggler">
-				<use xlink:href="assets/sprite.svg#toggler"></use>
-			</svg>
-			<ul class="list nav__list collapsible__content">
-				<li class="nav__item"><a href="#">Services</a></li>
-				<li class="nav__item"><a href="#">Our Expertise</a></li>
-				<li class="nav__item"><a href="#">Projects</a></li>
-				<li class="nav__item"><a href="#">About Us</a></li>
-			</ul>
-		</nav>
+		<header>
+			<nav class="navbar collapsible">
+				<a href="/">
+					<img class="nav__logo" src="assets/logo-dark.svg" alt="" />
+					<!-- <p class="logo-text">Güýmenje</p> -->
+				</a>
+				<svg class="icon icon--white collapsible__toggler nav__toggler">
+					<use xlink:href="assets/sprite.svg#toggler"></use>
+				</svg>
+				<ul class="list nav__list collapsible__content">
+					<li class="nav__item"><a href="#">Services</a></li>
+					<li class="nav__item"><a href="#">Our Expertise</a></li>
+					<li class="nav__item"><a href="#">Projects</a></li>
+					<li class="nav__item"><a href="#">About Us</a></li>
+				</ul>
+			</nav>
+			<section class="block block--dark block--skewed-left banner">
+				<article class="container grid grid--1x2">
+					<header class="block__header banner__content">
+						<h1 class="block__heading">
+							Application Development Company
+						</h1>
+						<p class="banner__tagline">
+							Go from an idea, wireframe, or technical specs to
+							fully-functional applications incredibly fast.
+						</p>
+						<a href="#" class="btn btn--accent btn--stretched">
+							Get Started
+						</a>
+					</header>
+					<img
+						class="banner__image"
+						src="assets/images/banner.svg"
+						alt=""
+					/>
+				</article>
+			</section>
+		</header>
 
-		<section class="block block--dark block--skewed-left banner">
-			<article class="container grid grid--1x2">
-				<header class="block__header banner__content">
-					<h1 class="block__heading">
-						Application Development Company
-					</h1>
-					<p class="banner__tagline">
-						Go from idea, wireframe, or technical specs to
-						fully-functional applications incredibly fast.
+		<main>
+			<section class="block container features">
+				<header class="block__header">
+					<h2>Get your apps built for any device</h2>
+					<p>
+						You've got the idea, we've got the expertise. From a
+						wide variety of frameworks and technologies, our company
+						can help turn your idea into a reality. With constant
+						changes happening in the digital world, it is vital to
+						stay on top of developing technologies. We can make it
+						happen for you.
 					</p>
-					<a href="#" class="btn btn--accent btn--stretched">
-						Get Started
-					</a>
 				</header>
-				<img
-					class="banner__image"
-					src="assets/images/banner-mini.svg"
-					alt=""
-				/>
-			</article>
-		</section>
+				<article class="grid grid--1x2 feature">
+					<div class="feature__content">
+						<span class="icon-container">
+							<svg class="icon icon--primary">
+								<use xlink:href="assets/sprite.svg#i-web"></use>
+							</svg>
+						</span>
+						<h3 class="feature__heading">WEB Development</h3>
+						<p>
+							We create beautiful, responsive and incredibly fast
+							websites and web apps. From planning to design and
+							development – our goal is to build high-performing
+							and award-winning websites. Get a perfect website to
+							start or to keep your business moving forward with
+							our help.
+						</p>
+						<a href="#" class="link-arrow">
+							Learn More
+							<svg class="icon">
+								<use
+									xlink:href="assets/sprite.svg#arrow-right"
+								></use>
+							</svg>
+						</a>
+					</div>
+					<!-- Image Size: 1140x725 -->
+					<img
+						class="feature__image"
+						src="assets/images/web.svg"
+						alt=""
+					/>
+				</article>
+				<article class="grid grid--1x2 feature">
+					<div class="feature__content">
+						<span class="icon-container">
+							<svg class="icon icon--primary">
+								<use
+									xlink:href="assets/sprite.svg#i-server"
+								></use>
+							</svg>
+						</span>
+						<h3 class="feature__heading">
+							Server-side Development
+						</h3>
+						<p>
+							This type of programming, also called as back-end
+							development, is important because web browsers, or
+							clients, interact with web servers to retrieve
+							information. In order to create incredible user
+							experiences, our company develops the perfect
+							back-end solution for your business ambitions.
+						</p>
+						<a href="#" class="link-arrow">
+							Learn More
+							<svg class="icon">
+								<use
+									xlink:href="assets/sprite.svg#arrow-right"
+								></use>
+							</svg>
+						</a>
+					</div>
+					<!-- Image Size: 1140x725 -->
+					<img
+						class="feature__image"
+						src="assets/images/server-cool.svg"
+						alt=""
+					/>
+				</article>
+				<article class="grid grid--1x2 feature">
+					<div class="feature__content">
+						<span class="icon-container">
+							<svg class="icon icon--primary">
+								<use
+									xlink:href="assets/sprite.svg#i-mobile"
+								></use>
+							</svg>
+						</span>
+						<h3 class="feature__heading">Mobile App Development</h3>
+						<p>
+							Growing with the times is a must for every company
+							that wishes to stay up-to-date with the public, and
+							mobile apps have taken the world by storm. You can
+							reach out to clients on android and ios platforms
+							with our fastest development process.
+						</p>
+						<a href="#" class="link-arrow">
+							Learn More
+							<svg class="icon">
+								<use
+									xlink:href="assets/sprite.svg#arrow-right"
+								></use>
+							</svg>
+						</a>
+					</div>
+					<!-- Image Size: 1140x725 -->
+					<img
+						class="feature__image"
+						src="assets/images/mobile.svg"
+						alt=""
+					/>
+				</article>
+				<article class="grid grid--1x2 feature">
+					<div class="feature__content">
+						<span class="icon-container">
+							<svg class="icon icon--primary">
+								<use
+									xlink:href="assets/sprite.svg#i-devices"
+								></use>
+							</svg>
+						</span>
+						<h3 class="feature__heading">
+							Cross-Platform Development
+						</h3>
+						<p>
+							Get a multi-device app faster with a single strike,
+							because we build beautiful web, android and ios apps
+							from a single codebase. The development of a
+							cross-platform app is a perfect solution for
+							companies that face budget or time constraints.
+						</p>
+						<a href="#" class="link-arrow">
+							Learn More
+							<svg class="icon">
+								<use
+									xlink:href="assets/sprite.svg#arrow-right"
+								></use>
+							</svg>
+						</a>
+					</div>
+					<!-- Image Size: 1140x725 -->
+					<picture>
+						<!-- Image Size should be 1024x700 -->
+						<source
+							type="image/webp"
+							srcset="
+								assets/images/devices.webp    1x,
+								assets/images/devices@2x.webp 2x
+							"
+						/>
+						<source
+							type="image/png"
+							srcset="
+								assets/images/devices.png    1x,
+								assets/images/devices@2x.png 2x
+							"
+						/>
+						<img
+							class="feature__image"
+							src="assets/images/devices@2x.png"
+							alt=""
+						/>
+					</picture>
+				</article>
+			</section>
+		</main>
+
+		<footer>
+			<!--Copyright-->
+		</footer>
+
 		<script src="js/index.js"></script>
 	</body>
 </html>
