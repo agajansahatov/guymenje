@@ -19,3 +19,17 @@
 		33vw 
 	"
 />
+
+<!-- feature/picture component -->
+<picture>
+	<!-- Image Size should be 1024x700 -->
+	<source
+		type="image/webp"
+		srcset="assets/images/web.webp 1x, assets/images/web@2x.webp 2x"
+	/>
+	<source
+		type="image/png"
+		srcset="assets/images/web.png 1x, assets/images/web@2x.png 2x"
+	/>
+	<img class="feature__image" src="assets/images/web@2x.png" alt="" />
+</picture>

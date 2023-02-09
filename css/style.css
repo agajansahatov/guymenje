@@ -99,8 +99,8 @@ p {
 
 /* Icons */
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .icon--small{
@@ -124,8 +124,8 @@ p {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 52px;
   border-radius: 100%;
   background: #f3f9fa;
 }
@@ -138,6 +138,11 @@ p {
   .icon-container {
     width: 64px;
     height: 64px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
   }
 
   .icon--small{
@@ -587,7 +592,7 @@ a {
 /* Blocks */
 .block {
   --padding-vertical: 5rem;
-  padding: var(--padding-vertical) 0.5rem;
+  padding: var(--padding-vertical) 1rem;
 }
 
 .block__header{
@@ -720,3 +725,26 @@ a {
 
 
 
+/* Features */
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
