@@ -241,24 +241,11 @@ a {
   border-bottom: 2px solid #222;
 }
 
-/* .nav__header {
-  display: inline-flex;
-}  */
 .nav__logo {
   height: 45px;
   margin: 0;
   margin-left: 3px;
-  /* clip-path: inset(0 62% 0 0); */
 }
-
-/* .nav__header .logo-text {
-  align-self: center;
-  font-size: 21px;
-  letter-spacing: 1px;
-  color: #fff;
-  margin: 0px 0 0 -85px;
-  padding: 0;
-} */
 
 .nav__list {
   width: 100%;
@@ -306,9 +293,6 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .navbar {
-    padding: 1rem;
-  }
   .nav__toggler {
     display: none;
   }
@@ -328,15 +312,16 @@ a {
   .nav__item:last-child {
     padding-right: 1rem;
   }
+}
 
+@media screen and (min-width: 1024px) {
   .nav__logo {
     height: 40px;
-    /* clip-path: inset(0 0 0 0); */
   }
-  
-  /* .nav__header .logo-text {
-    display: none;
-  } */
+
+  .navbar {
+    padding: 1rem;
+  }
 }
 
 
@@ -604,7 +589,7 @@ a {
 /* Blocks */
 .block {
   --padding-vertical: 4rem;
-  padding: var(--padding-vertical) 1rem;
+  padding: var(--padding-vertical) 1.5rem;
 }
 
 .block__header{
@@ -634,12 +619,12 @@ a {
 }
 
 .block--skewed-right {
-  padding-bottom: calc(var(--padding-vertical) + 9rem);
+  padding-bottom: calc(var(--padding-vertical) + 6rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 
 .block--skewed-left {
-  padding-bottom: calc(var(--padding-vertical) + 9rem);
+  padding-bottom: calc(var(--padding-vertical) + 6rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
@@ -651,8 +636,8 @@ a {
 
 @media screen and (min-width: 440px) {
   .block{
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -674,6 +659,7 @@ a {
 .banner__image {
   width: 100%;
   margin-top: 5rem;
+  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -752,8 +738,18 @@ a {
   margin: 1rem 0;
 }
 
-.feature__image {
+.feature__image, .feature__image-container {
   width: 100%;
+  display: block;
+  align-self: center;
+}
+
+.feature__image {
+  border-radius: 10px;
+}
+
+.feature__image-container > .feature__image {
+  border-radius: 0;
 }
 
 @media screen and (min-width: 768px) {
