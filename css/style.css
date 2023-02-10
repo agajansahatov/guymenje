@@ -128,10 +128,15 @@ p {
   height: 52px;
   border-radius: 100%;
   background: #f3f9fa;
+  overflow: hidden;
 }
 
 .icon-container--accent {
   background: var(--color-accent);
+}
+
+.icon-container--dark {
+  background: #1d1d1d;
 }
 
 @media screen and (min-width: 400px) {
@@ -419,6 +424,7 @@ a {
 /* Media */
 .media {
   display: flex;
+  margin-bottom: 2rem;
 }
 
 .media__title {
@@ -597,7 +603,7 @@ a {
 
 /* Blocks */
 .block {
-  --padding-vertical: 5rem;
+  --padding-vertical: 4rem;
   padding: var(--padding-vertical) 1rem;
 }
 
@@ -621,18 +627,20 @@ a {
   color: #7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1, 
+.block--dark h2, 
+.block--dark h3 {
   color: #fff;
 }
 
 .block--skewed-right {
-  padding-bottom: calc(var(--padding-vertical) + 5rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  padding-bottom: calc(var(--padding-vertical) + 9rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 
 .block--skewed-left {
-  padding-bottom: calc(var(--padding-vertical) + 5rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  padding-bottom: calc(var(--padding-vertical) + 9rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .container {
@@ -652,7 +660,6 @@ a {
 
 /* Banner */
 .banner {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
   min-height: fit-content;
   display: flex;
   align-items: center;
@@ -753,4 +760,9 @@ a {
   .feature:nth-of-type(even) .feature__content {
     order: 2;
   }
+}
+
+/* Expertise section */
+.expertise > .grid {
+  margin-top: 6rem;
 }
