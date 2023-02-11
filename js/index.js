@@ -16,7 +16,9 @@ const collapsibles = document.querySelectorAll(".collapsible");
 
 collapsibles.forEach((item) => {
 	const toggler = item.querySelector(".collapsible__toggler");
-	toggler.addEventListener("click", function () {
-		item.classList.toggle("collapsible--expanded");
-	});
+	if (toggler !== null) {
+		toggler.addEventListener("click", function () {
+			item.classList.toggle("collapsible--expanded");
+		});
+	}
 });

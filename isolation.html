@@ -29,48 +29,78 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<section class="block">
-			<header class="block__header">
-				<h2>What our Customers are Saying</h2>
-				<p>We are delighted to have such happy and satisfied customers.</p>
-			</header>
-			<div class="container">
-				<div class="card testimonial">
-					<div class="grid grid--1x2">
-						<div class="testimonial__image">
-							<img
-								src="assets/images/testimonial.jpg"
-								alt="A happy, smiling customer"
-							/>
-							<span class="icon-container icon-container--accent">
-								<svg class="icon icon--white icon--small">
-									<use xlink:href="assets/icons.svg#quotes"></use>
-								</svg>
-							</span>
-						</div>
-						<blockquote class="quote">
-							<p class="quote__text">
-								I am so happy to recommend Agajan Sahatov and his company. They
-								delivered an excellent website (a landing page), which is very
-								beautiful, responsive and blazingly fast. The team is very
-								professional, easy to work with and has good results.
-							</p>
-							<div class="media">
-								<div class="media__image">
-									<svg class="icon icon--primary quote__line">
-										<use xlink:href="assets/icons.svg#line"></use>
-									</svg>
-								</div>
-								<div class="media__body">
-									<h3 class="media__title quote__author">John Smith</h3>
-									<p class="quote__company">Entrepreneur</p>
-								</div>
-							</div>
-						</blockquote>
+		<footer class="block block--dark footer">
+			<div class="container grid footer__articles">
+				<article class="collapsible collapsible--expanded footer__article">
+					<header class="collapsible__header">
+						<h2 class="collapsible__heading footer__heading">SERVICES</h2>
+						<span
+							class="icon-container collapsible__toggler footer__toggler-container"
+						>
+							<svg class="icon icon--white footer__toggler">
+								<use xlink:href="assets/icons.svg#angle-down"></use>
+							</svg>
+						</span>
+					</header>
+					<div class="collapsible__content">
+						<ul class="list">
+							<li><a href="#">Front-End Apps</a></li>
+							<li><a href="#">Back-End Apps</a></li>
+							<li><a href="#">Mobile Apps</a></li>
+							<li><a href="#">Cross-Platform Apps</a></li>
+						</ul>
 					</div>
-				</div>
+				</article>
+				<article class="collapsible footer__article">
+					<header class="collapsible__header footer__heading">
+						<h2 class="collapsible__heading footer__heading">PROJECTS</h2>
+						<span
+							class="icon-container collapsible__toggler footer__toggler-container"
+						>
+							<svg class="icon icon--white footer__toggler">
+								<use xlink:href="assets/icons.svg#angle-down"></use>
+							</svg>
+						</span>
+					</header>
+					<div class="collapsible__content">
+						<ul class="list">
+							<li><a href="#">Admin Panel</a></li>
+							<li><a href="#">Sozluk</a></li>
+							<li><a href="#">Landing Page</a></li>
+						</ul>
+					</div>
+				</article>
+				<article class="collapsible footer__article">
+					<header class="collapsible__header">
+						<!--Anything you want to show in the hidden mode-->
+						<h2 class="collapsible__heading footer__heading">COMPANY</h2>
+						<span
+							class="icon-container collapsible__toggler footer__toggler-container"
+						>
+							<svg class="icon icon--white footer__toggler">
+								<use xlink:href="assets/icons.svg#angle-down"></use>
+							</svg>
+						</span>
+					</header>
+					<!--Anything you want to show in the expanded mode-->
+					<div class="collapsible__content">
+						<ul class="list">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Why Choose Us?</a></li>
+						</ul>
+					</div>
+				</article>
+				<article class="footer__brand">
+					<img src="assets/logo-dark.svg" alt="" />
+					<p class="footer__copyright">
+						Copyright &copy; 2023 Agajan&nbsp;Sahatov
+					</p>
+					<p class="footer__copyright">All Rights Reserved</p>
+				</article>
 			</div>
-		</section>
+		</footer>
 		<script src="js/index.js"></script>
 	</body>
 </html>
