@@ -67,10 +67,19 @@
 					<use xlink:href="assets/icons.svg#toggler"></use>
 				</svg>
 				<ul class="list nav__list collapsible__content">
-					<li class="nav__item"><a href="#">Services</a></li>
-					<li class="nav__item"><a href="#">Our Expertise</a></li>
-					<li class="nav__item"><a href="#">Projects</a></li>
-					<li class="nav__item"><a href="#">About Us</a></li>
+					<li class="nav__item"><a href="#section-services">Services</a></li>
+					<li class="nav__item">
+						<a href="#section-expertise">Our Expertise</a>
+					</li>
+					<li class="nav__item">
+						<a
+							href="https://github.com/Agajan-Sahatov?tab=repositories"
+							target="_blank"
+						>
+							Projects
+						</a>
+					</li>
+					<li class="nav__item"><a href="#section-showcase">About Us</a></li>
 				</ul>
 			</nav>
 			<section class="block block--dark block--skewed-left banner">
@@ -81,7 +90,9 @@
 							Go from an idea, wireframe, or technical specs to fully-functional
 							applications incredibly fast.
 						</p>
-						<a href="#" class="btn btn--accent btn--stretched"> Get Started </a>
+						<a href="#section-services" class="btn btn--accent btn--stretched">
+							Get Started
+						</a>
 					</header>
 					<img
 						class="banner__image"
@@ -94,7 +105,7 @@
 		</header>
 
 		<main>
-			<section class="block container features">
+			<section class="block container features" id="section-services">
 				<header class="block__header" data-aos="fade-up">
 					<h2>Get your apps built for any device</h2>
 					<p>
@@ -105,7 +116,7 @@
 						make it happen for you.
 					</p>
 				</header>
-				<article class="grid grid--1x2 feature">
+				<article class="grid grid--1x2 feature" id="service1">
 					<div class="feature__content" data-aos="fade-up-right">
 						<span class="icon-container">
 							<svg class="icon icon--primary">
@@ -120,7 +131,7 @@
 							website to start or to keep your business moving forward with our
 							help.
 						</p>
-						<a href="#" class="link-arrow">
+						<a href="#service2" class="link-arrow">
 							Learn More
 							<svg class="icon">
 								<use xlink:href="assets/icons.svg#arrow-right"></use>
@@ -135,7 +146,7 @@
 						alt=""
 					/>
 				</article>
-				<article class="grid grid--1x2 feature">
+				<article class="grid grid--1x2 feature" id="service2">
 					<div class="feature__content" data-aos="fade-down-left">
 						<span class="icon-container">
 							<svg class="icon icon--primary">
@@ -150,7 +161,7 @@
 							experiences, our company develops the perfect back-end solution
 							for your business ambitions.
 						</p>
-						<a href="#" class="link-arrow">
+						<a href="#service3" class="link-arrow">
 							Learn More
 							<svg class="icon">
 								<use xlink:href="assets/icons.svg#arrow-right"></use>
@@ -165,7 +176,7 @@
 						alt=""
 					/>
 				</article>
-				<article class="grid grid--1x2 feature">
+				<article class="grid grid--1x2 feature" id="service3">
 					<div class="feature__content" data-aos="flip-right">
 						<span class="icon-container">
 							<svg class="icon icon--primary">
@@ -179,7 +190,7 @@
 							world by storm. You can reach out to clients on android and ios
 							platforms with our fastest development process.
 						</p>
-						<a href="#" class="link-arrow">
+						<a href="#service4" class="link-arrow">
 							Learn More
 							<svg class="icon">
 								<use xlink:href="assets/icons.svg#arrow-right"></use>
@@ -194,7 +205,7 @@
 						alt=""
 					/>
 				</article>
-				<article class="grid grid--1x2 feature">
+				<article class="grid grid--1x2 feature" id="service4">
 					<div class="feature__content" data-aos="flip-up">
 						<span class="icon-container">
 							<svg class="icon icon--primary">
@@ -208,7 +219,7 @@
 							The development of a cross-platform app is a perfect solution for
 							companies that face budget or time constraints.
 						</p>
-						<a href="#" class="link-arrow">
+						<a href="#section-expertise" class="link-arrow">
 							Learn More
 							<svg class="icon">
 								<use xlink:href="assets/icons.svg#arrow-right"></use>
@@ -240,7 +251,10 @@
 				</article>
 			</section>
 
-			<section class="block block--dark block--skewed-right expertise">
+			<section
+				class="block block--dark block--skewed-right expertise"
+				id="section-expertise"
+			>
 				<header class="block__header" data-aos="zoom-in-up">
 					<h2>Common Technologies We Use</h2>
 				</header>
@@ -369,7 +383,7 @@
 				</div>
 			</section>
 
-			<section class="block container showcase">
+			<section class="block container showcase" id="section-showcase">
 				<header class="block__header" data-aos="fade-up">
 					<h2>Why People Choose Us?</h2>
 					<p>
@@ -378,7 +392,7 @@
 					</p>
 				</header>
 
-				<article class="grid grid--1x2 feature">
+				<article class="grid grid--1x2 feature" id="showcase1">
 					<div class="feature__content" data-aos="flip-up">
 						<span class="icon-container">
 							<svg class="icon icon--primary">
@@ -391,7 +405,7 @@
 							up to almost 100% code reuse to target several platforms
 							simultaneously: web, mobile ios and android platforms.
 						</p>
-						<a href="#" class="link-arrow">
+						<a href="#showcase2" class="link-arrow">
 							Learn More
 							<svg class="icon">
 								<use xlink:href="assets/icons.svg#arrow-right"></use>
@@ -407,7 +421,7 @@
 					/>
 				</article>
 
-				<article class="grid grid--1x2 feature">
+				<article class="grid grid--1x2 feature" id="showcase2">
 					<div class="feature__content" data-aos="zoom-out-left">
 						<span class="icon-container">
 							<svg class="icon icon--primary">
@@ -423,7 +437,7 @@
 							faster period, and give more focus on the speed of the
 							applications.
 						</p>
-						<a href="#" class="link-arrow">
+						<a href="#showcase3" class="link-arrow">
 							Learn More
 							<svg class="icon">
 								<use xlink:href="assets/icons.svg#arrow-right"></use>
@@ -439,7 +453,7 @@
 					/>
 				</article>
 
-				<article class="grid grid--1x2 feature">
+				<article class="grid grid--1x2 feature" id="showcase3">
 					<div class="feature__content" data-aos="zoom-in-left">
 						<span class="icon-container">
 							<svg class="icon icon--primary">
@@ -456,7 +470,7 @@
 							lowest fees in the industry, providing you with maximum value in
 							the fastest time.
 						</p>
-						<a href="#" class="link-arrow">
+						<a href="#showcase4" class="link-arrow">
 							Learn More
 							<svg class="icon">
 								<use xlink:href="assets/icons.svg#arrow-right"></use>
@@ -472,7 +486,7 @@
 					/>
 				</article>
 
-				<article class="grid grid--1x2 feature">
+				<article class="grid grid--1x2 feature" id="showcase4">
 					<div class="feature__content" data-aos="flip-right">
 						<span class="icon-container">
 							<svg class="icon icon--primary">
@@ -486,7 +500,7 @@
 							guarantee quality assurance by delivering bug-free applications to
 							have your end user's most pleasant user experience.
 						</p>
-						<a href="#" class="link-arrow">
+						<a href="#showcase5" class="link-arrow">
 							Learn More
 							<svg class="icon">
 								<use xlink:href="assets/icons.svg#arrow-right"></use>
@@ -502,7 +516,7 @@
 					/>
 				</article>
 
-				<article class="grid grid--1x2 feature">
+				<article class="grid grid--1x2 feature" id="showcase5">
 					<div class="feature__content" data-aos="fade-down-right">
 						<span class="icon-container">
 							<svg class="icon icon--primary">
@@ -515,7 +529,7 @@
 							queries over the phone or email, no matter where you are located.
 							So, feel free to contact us and ask any questions.
 						</p>
-						<a href="#" class="link-arrow">
+						<a href="#section-testimonials" class="link-arrow">
 							Learn More
 							<svg class="icon">
 								<use xlink:href="assets/icons.svg#arrow-right"></use>
@@ -532,7 +546,7 @@
 				</article>
 			</section>
 
-			<section class="block container testimonials">
+			<section class="block container testimonials" id="section-testimonials">
 				<header class="block__header" data-aos="zoom-in-up">
 					<h2>What our Customers are Saying</h2>
 					<p>We are delighted to have such happy and satisfied customers.</p>
@@ -579,7 +593,7 @@
 				</article>
 			</section>
 
-			<section class="container">
+			<section class="container" id="contact-us">
 				<div class="callout callout--primary">
 					<div class="grid grid--1x2">
 						<div class="callout__content">
@@ -590,9 +604,12 @@
 								located. So, feel free to contact us and ask any questions.
 							</p>
 						</div>
-						<a href="#" class="btn btn--secondary btn--stretched"
-							>Get Started</a
+						<a
+							href="mailto:agajansahatov@hotmail.com"
+							class="btn btn--secondary btn--stretched"
 						>
+							Contact Us
+						</a>
 					</div>
 				</div>
 			</section>
@@ -613,14 +630,17 @@
 					</header>
 					<div class="collapsible__content">
 						<ul class="list">
-							<li><a href="#">Front-End Apps</a></li>
-							<li><a href="#">Back-End Apps</a></li>
-							<li><a href="#">Mobile Apps</a></li>
-							<li><a href="#">Cross-Platform Apps</a></li>
+							<li><a href="#service1">Front-End Apps</a></li>
+							<li><a href="#service2">Back-End Apps</a></li>
+							<li><a href="#service3">Mobile Apps</a></li>
+							<li><a href="#service4">Cross-Platform Apps</a></li>
 						</ul>
 					</div>
 				</article>
-				<article class="collapsible footer__article">
+				<article
+					class="collapsible footer__article"
+					id="footer__article-projects"
+				>
 					<header class="collapsible__header footer__heading">
 						<h2 class="collapsible__heading footer__heading">PROJECTS</h2>
 						<span
@@ -633,9 +653,9 @@
 					</header>
 					<div class="collapsible__content">
 						<ul class="list">
-							<li><a href="#">Admin Panel</a></li>
-							<li><a href="#">Sozluk</a></li>
-							<li><a href="#">Landing Page</a></li>
+							<li><a href="#footer__article-projects">Admin Panel</a></li>
+							<li><a href="#footer__article-projects">Sozluk</a></li>
+							<li><a href="#footer__article-projects">Landing Page</a></li>
 						</ul>
 					</div>
 				</article>
@@ -654,10 +674,21 @@
 					<!--Anything you want to show in the expanded mode-->
 					<div class="collapsible__content">
 						<ul class="list">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Why Choose Us?</a></li>
+							<li><a href="/">Home</a></li>
+							<li>
+								<a
+									href="https://www.linkedin.com/in/agajansahatov/"
+									target="_blank"
+								>
+									About
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/AgajanSahatov" target="_blank">
+									Contact Us
+								</a>
+							</li>
+							<li><a href="#section-showcase">Why Choose Us?</a></li>
 						</ul>
 					</div>
 				</article>
