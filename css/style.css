@@ -586,6 +586,10 @@ a {
   margin-top: 6rem;
 }
 
+.feature:last-of-type {
+  margin-bottom: 6rem;
+}
+
 .feature__heading {
   margin: 1rem 0;
 }
@@ -690,6 +694,11 @@ a {
 
 
 /* Testimonials */
+.testimonials {
+  transform: translateY(-7rem);
+  padding-bottom: 0;
+}
+
 .testimonial {
   padding: 2rem;
 }
