@@ -559,10 +559,27 @@
 					>
 						<div class="grid grid--1x2">
 							<div class="testimonial__image">
-								<img
-									src="assets/images/testimonial.jpg"
-									alt="A happy, smiling customer"
-								/>
+								<picture>
+									<source
+										type="image/webp"
+										srcset="
+											assets/images/meylis.webp    1x,
+											assets/images/meylis@2x.webp 2x
+										"
+									/>
+									<source
+										type="image/png"
+										srcset="
+											assets/images/meylis.png    1x,
+											assets/images/meylis@2x.png 2x
+										"
+									/>
+									<img
+										class="feature__image"
+										src="assets/images/meylis@2x.png"
+										alt="A happy, smiling customer"
+									/>
+								</picture>
 								<span class="icon-container icon-container--accent">
 									<svg class="icon icon--white icon--small">
 										<use xlink:href="assets/icons.svg#quotes"></use>
@@ -583,7 +600,9 @@
 										</svg>
 									</div>
 									<div class="media__body">
-										<h3 class="media__title quote__author">John Smith</h3>
+										<h3 class="media__title quote__author">
+											Meylis Sahetmammedov
+										</h3>
 										<p class="quote__company">Entrepreneur</p>
 									</div>
 								</div>
