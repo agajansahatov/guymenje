@@ -796,19 +796,73 @@ a {
   color: #fff;
 }
 
-.callout__heading {
+.callout__heading{
   color: #fff;
   margin-top: 0;
   font-size: 3rem;
 }
 
-.callout .btn {
+.callout__toggler {
   justify-self: center;
   align-self: center;
 }
 
+.collapsible--expanded .callout__toggler{
+  /* border: 3px solid #00b4ff;  */
+  box-shadow: 0 0 4px 5px rgba(68, 68, 68, 0.1);
+  transition: all .3s;
+}
+
 .callout__content {
   text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+} 
+
+.contact-info__header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.contact-info__heading {
+  margin: 0 0 0.5rem 0;
+  padding: 0 2rem;
+  display: block;
+  text-align: center;
+}
+
+.contact-type{
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  margin: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: inherit;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.contact-type:hover{
+  background: rgba(68, 68, 68, 0.3);
+}
+
+.contact-type:hover .icon{
+  transform: scale(1.1);
+  transition: all .3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -826,7 +880,15 @@ a {
 
   .callout .btn {
     justify-self: start;
-    margin: 0 2rem;
+    margin: 0 0 0 1.5rem;
+  }
+
+  .contact-type {
+    margin: 1rem 2.5rem;
+  }
+
+  .contact-info__heading {
+    font-size: 2.3rem;
   }
 }
 
