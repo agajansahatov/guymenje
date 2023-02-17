@@ -22,3 +22,9 @@ collapsibles.forEach((item) => {
 		});
 	}
 });
+
+function showContactInfo(label, strCopy) {
+	navigator.clipboard.writeText(strCopy);
+	window.alert(`${label}: ${strCopy}.
+Already copied to the clipboard!`);
+}
