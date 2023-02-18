@@ -1,19 +1,4 @@
-// const collapsibles = document.querySelectorAll(".collapsible");
-// collapsibles.forEach((item) =>
-// 	item.addEventListener("click", function () {
-// 		this.classList.toggle("collapsible--expanded");
-// 	})
-// );
-
-// const collapsibles = document.querySelectorAll(".collapsible__toggler");
-// collapsibles.forEach((item) =>
-// 	item.addEventListener("click", function () {
-// 		this.parentNode.classList.toggle("collapsible--expanded");
-// 	})
-// );
-
 const collapsibles = document.querySelectorAll(".collapsible");
-
 collapsibles.forEach((item) => {
 	const toggler = item.querySelector(".collapsible__toggler");
 	if (toggler !== null) {
@@ -24,7 +9,11 @@ collapsibles.forEach((item) => {
 });
 
 function showContactInfo(label, strCopy) {
-	navigator.clipboard.writeText(strCopy);
-	window.alert(`${label}: ${strCopy}.
-Already copied to the clipboard!`);
+	let status = "";
+	if (ClipboardJS.isSupported()) {
+		ClipboardJS.copy(strCopy);
+		status = "Already copied to the clipboard!";
+	}
+
+	window.alert(`${label}: ${strCopy}.\n${status}`);
 }
