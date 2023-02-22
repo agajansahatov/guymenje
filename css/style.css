@@ -9,12 +9,15 @@
   --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
+  --iconWidth: 52px;
+  --iconHeight: 52px;
 }
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -112,14 +115,33 @@ p {
 
 
 /* Icons */
+.icon-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--iconWidth);
+  height: var(--iconHeight);
+  border-radius: 100%;
+  background: #f3f9fa;
+  overflow: hidden;
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
+}
+
+.icon-container--dark {
+  background: #1d1d1d;
+}
+
 .icon {
-  width: 35px;
-  height: 35px;
+  width: calc(var(--iconWidth) - 17px);
+  height: calc(var(--iconHeight) - 17px);
 }
 
 .icon--small {
-  width: 16px;
-  height: 16px;
+  width: calc(var(--iconWidth) - 36px);
+  height: calc(var(--iconHeight) - 36px);
 }
 
 .icon--primary {
@@ -134,39 +156,20 @@ p {
   fill: #fff;
 }
 
-.icon-container {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 100%;
-  background: #f3f9fa;
-  overflow: hidden;
-}
-
-.icon-container--accent {
-  background: var(--color-accent);
-}
-
-.icon-container--dark {
-  background: #1d1d1d;
-}
-
 @media screen and (min-width: 400px) {
   .icon-container {
-    width: 64px;
-    height: 64px;
+    width: calc(var(--iconWidth) + 12px);
+    height: calc(var(--iconHeight) + 12px);
   }
 
   .icon {
-    width: 40px;
-    height: 40px;
+    width: calc(var(--iconWidth) - 12px);
+    height: calc(var(--iconHeight) - 12px);
   }
 
   .icon--small {
-    width: 30px;
-    height: 30px;
+    width: calc(var(--iconWidth) - 22px);
+    height: calc(var(--iconHeight) - 22px);
   }
 }
 
@@ -186,6 +189,10 @@ a {
   text-decoration: none;
   display: inline-block;
   color: inherit;
+}
+
+a:focus, a:visited, a:active{
+  outline: none;
 }
 
 .link-arrow {
@@ -364,6 +371,7 @@ a {
   cursor: pointer;
   white-space: nowrap;
   margin: 1rem 0;
+  outline: 0;
 }
 
 .btn--outline {
@@ -896,7 +904,7 @@ a {
 .footer {
   background: #232323;
   padding-top: 10rem;
-  padding-bottom: 7rem;
+  padding-bottom: 8.5rem;
 }
 
 .footer__toggler-container {
@@ -1000,4 +1008,71 @@ a {
   .footer__heading {
     font-size: 2.2rem;
   }
+}
+
+/* Scroll To Top Button */
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-to-top {
+  --btnWidth: 64px;
+  --btnHeight: 64px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: var(--btnWidth);
+  height: var(--btnHeight);
+  border-radius: 100%;
+  border: none;
+  display: none;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px #393939;
+  margin: 0;
+  padding: 0;
+  opacity: 0.75;
+  transition: opacity .2s;
+}
+
+.scroll-to-top:hover{
+  opacity: 1;
+}
+
+.scroll-to-top > .icon-container {
+  --iconWidth: calc(var(--btnWidth) - 8px);
+  --iconHeight: calc(var(--btnHeight) - 8px);
+  background-color: #393939;
+}
+
+@media screen and (min-width: 400px) {
+  .scroll-to-top > .icon-container {
+    --iconWidth: calc(var(--btnWidth) - 8px - 12px);
+    --iconHeight: calc(var(--btnHeight) - 8px - 12px);
+  }
+}
+
+/* Scrolbar */
+* {
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background: #000;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #393939;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #393939;
+}
+
+*::-webkit-scrollbar-thumb:hover{
+  background: #fff;
 }
