@@ -23,7 +23,9 @@ function showContactInfo(label, strCopy) {
 //SCROLL TO TOP BUTTON
 let calcScrollValue = () => {
 	let scrollProgress = document.getElementById("scroll-progress");
-	let pos = document.documentElement.scrollTop;
+	let pos = (window.pageYOffset !== undefined) ? 
+			window.pageYOffset : 
+			(document.documentElement || document.body.parentNode || document.body).scrollTop;
 	let height =
 		document.documentElement.scrollHeight -
 		document.documentElement.clientHeight;

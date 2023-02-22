@@ -1033,6 +1033,8 @@ html {
   padding: 0;
   opacity: 0.75;
   transition: opacity .2s;
+  overflow: hidden;
+  z-index: 999;
 }
 
 .scroll-to-top:hover{
