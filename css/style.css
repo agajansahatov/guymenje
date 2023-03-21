@@ -1055,10 +1055,6 @@ html {
 }
 
 /* Scrolbar */
-* {
-  scrollbar-width: thin;
-}
-
 *::-webkit-scrollbar {
   width: 10px;
   background: #000;
