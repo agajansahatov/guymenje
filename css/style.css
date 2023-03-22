@@ -209,7 +209,7 @@ a:focus, a:visited, a:active{
   height: 2.2rem;
   width: 2.2rem;
   margin-left: 5px;
-  transition: margin 0.15s;
+  transition: margin .3s;
 }
 
 .link-arrow:hover .icon {
@@ -374,6 +374,10 @@ a:focus, a:visited, a:active{
   outline: 0;
 }
 
+.btn:hover {
+  transition: all .3s;
+}
+
 .btn--outline {
   background: #fff;
   color: var(--color-headings);
@@ -400,7 +404,7 @@ a:focus, a:visited, a:active{
 }
 
 .btn--secondary:hover {
-  background: #00c8eb;
+  background: #10ceef;
 }
 
 .btn--accent {
@@ -816,9 +820,8 @@ a:focus, a:visited, a:active{
 }
 
 .collapsible--expanded .callout__toggler{
-  /* border: 3px solid #00b4ff;  */
-  box-shadow: 0 0 4px 5px rgba(68, 68, 68, 0.1);
-  transition: all .3s;
+  box-shadow: 0 0 0 4px #87edff;
+  transition: all .4s;
 }
 
 .callout__content {
