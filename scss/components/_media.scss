@@ -1,0 +1,14 @@
+.media {
+	display: flex;
+	margin-bottom: 20px;
+
+	&__title {
+		margin-top: 0;
+	}
+	&__body {
+		margin: 0 15px;
+	}
+	&__image {
+		margin-top: 10px;
+	}
+}

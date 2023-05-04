@@ -1,0 +1,35 @@
+@use "../utilities" as *;
+
+.feature {
+	gap: 40px 20px;
+	margin: 100px 0;
+	$parent: &;
+	&:first-of-type {
+		margin-top: 60px;
+	}
+	&:last-of-type {
+		margin-bottom: 60px;
+	}
+
+	@include breakpoint(md) {
+		&:nth-of-type(even) &__content {
+			order: 2;
+		}
+	}
+
+	&__heading {
+		margin: 10px 0;
+	}
+
+	&__image-container {
+		display: block;
+		align-self: center;
+		> #{$parent}__image {
+			border-radius: 0;
+		}
+	}
+
+	&__image {
+		border-radius: 10px;
+	}
+}

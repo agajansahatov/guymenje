@@ -1,0 +1,20 @@
+@use "../utilities" as *;
+@use "../utilities/colors" as Color;
+
+.card {
+	border-radius: 7px;
+	box-shadow: 0 0 20px 10px #f3f3f3;
+	overflow: hidden;
+	&__header,
+	&__body {
+		padding: 20px 30px;
+	}
+	&--primary &__header {
+		background: Color.$primary;
+		color: getForeColor(light);
+	}
+	&--secondary &__header {
+		background: Color.$secondary;
+		color: getForeColor(light);
+	}
+}

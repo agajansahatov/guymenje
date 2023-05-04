@@ -1,0 +1,57 @@
+@use "../utilities" as *;
+@use "../utilities/colors" as Color;
+:root {
+	--iconWidth: 52px;
+	--iconHeight: 52px;
+}
+
+.icon-container {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	overflow: hidden;
+	background: Color.$light;
+	width: var(--iconWidth);
+	height: var(--iconHeight);
+
+	@include breakpoint(xs) {
+		width: calc(var(--iconWidth) + 12px);
+		height: calc(var(--iconHeight) + 12px);
+	}
+
+	&--accent {
+		background: Color.$accent;
+	}
+	&--dark {
+		background: Color.$dark;
+	}
+}
+
+.icon {
+	width: calc(var(--iconWidth) - 17px);
+	height: calc(var(--iconHeight) - 17px);
+
+	@include breakpoint(xs) {
+		width: calc(var(--iconWidth) - 12px);
+		height: calc(var(--iconHeight) - 12px);
+	}
+
+	&--small {
+		width: calc(var(--iconWidth) - 36px);
+		height: calc(var(--iconHeight) - 36px);
+		@include breakpoint(xs) {
+			width: calc(var(--iconWidth) - 22px);
+			height: calc(var(--iconHeight) - 22px);
+		}
+	}
+	&--primary {
+		fill: Color.$primary;
+	}
+	&--accent {
+		fill: Color.$accent;
+	}
+	&--white {
+		fill: Color.$white;
+	}
+}
