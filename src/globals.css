@@ -1,0 +1,41 @@
+:root {
+	--color-primary: #2584ff;
+	--color-secondary: #00d9ff;
+	--color-accent: #ff3400;
+	--color-headings: #1b0760;
+	--color-body: #918ca4;
+	--color-body-darker: #5c5577;
+	--color-border: #ccc;
+	--border-radius: 30px;
+	--iconWidth: 52px;
+	--iconHeight: 52px;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+	overflow-x: hidden !important;
+	max-width: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	color: inherit;
+}
+
+a:focus,
+a:visited,
+a:active {
+	outline: none;
+}

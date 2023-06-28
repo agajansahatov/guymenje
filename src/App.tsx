@@ -1,9 +1,9 @@
-import Test from "./test";
+import Icon from "./components/Icon";
 
 const App = () => {
 	return (
 		<div>
-			<Test />
+			<Icon />
 		</div>
 	);
 };
