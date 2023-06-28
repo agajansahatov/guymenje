@@ -1,9 +1,9 @@
-import Icon from "./components/Icon";
+import ArrowLink from "./components/ArrowLink";
 
 const App = () => {
 	return (
 		<div>
-			<Icon />
+			<ArrowLink />
 		</div>
 	);
 };
