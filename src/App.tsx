@@ -1,9 +1,9 @@
-import ArrowLink from "./components/ArrowLink";
+import Collapsible from "./components/Collapsible";
 
 const App = () => {
 	return (
 		<div>
-			<ArrowLink />
+			<Collapsible />
 		</div>
 	);
 };
