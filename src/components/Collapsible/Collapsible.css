@@ -8,6 +8,7 @@
 .collapsible--expanded .collapsible__content {
 	max-height: 100vh;
 	opacity: 1;
+	overflow: visible;
 }
 
 .collapsible__header {

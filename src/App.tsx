@@ -1,11 +1,7 @@
-import Collapsible from "./components/Collapsible";
+import Navbar from "./components/Navbar";
 
 const App = () => {
-	return (
-		<div>
-			<Collapsible />
-		</div>
-	);
+	return <Navbar />;
 };
 
 export default App;

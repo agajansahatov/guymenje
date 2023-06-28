@@ -1,0 +1,99 @@
+.navbar {
+	background: #000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1.2rem;
+	margin-bottom: -1px;
+	border-bottom: 2px solid #222;
+}
+
+.nav__logo {
+	height: 45px;
+	margin: 0;
+	margin-left: 3px;
+}
+
+.nav__list {
+	width: 100%;
+}
+
+.nav__item {
+	padding: 1rem;
+	border-bottom: 1px solid #222;
+}
+
+.nav__item:last-child {
+	border-bottom: none;
+	padding-bottom: 0.6rem;
+}
+
+.nav__item > a {
+	color: #d2d0db;
+	transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+	color: #fff;
+}
+
+.nav__toggler {
+	opacity: 0.5;
+	border: 2px solid #000;
+	border-radius: 5px;
+	padding: 0 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.nav__toggler:hover {
+	opacity: 1;
+}
+
+.navbar:global(.collapsible--expanded) .nav__toggler {
+	opacity: 1;
+	border: 2px solid #fff;
+}
+
+.navbar:global(.collapsible--expanded) .nav__toggler:hover {
+	box-shadow: 0 0 3px 3px #666;
+}
+
+@media screen and (min-width: 768px) {
+	.nav__toggler {
+		display: none;
+	}
+
+	.navbar :global(.collapsible__content) {
+		max-height: 100vh;
+		opacity: 1;
+		overflow: visible;
+	}
+
+	.nav__list {
+		width: auto;
+		display: flex;
+		max-height: 100%;
+		opacity: 1;
+	}
+
+	.nav__item {
+		border: 0;
+		padding: 1rem 2rem;
+	}
+
+	.nav__item:last-child {
+		padding-right: 1rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.nav__logo {
+		height: 40px;
+	}
+
+	.navbar {
+		padding: 1rem;
+	}
+}
