@@ -1,0 +1,83 @@
+/* Buttons */
+.btn {
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 2rem 3rem;
+	border: 0;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	white-space: nowrap;
+	margin: 1rem 0;
+	outline: 0;
+}
+
+.btn:hover {
+	transition: all 0.3s;
+}
+
+.btn--outline {
+	background: #fff;
+	color: var(--color-headings);
+	border: 2px solid var(--color-headings);
+}
+
+.btn--outline:hover {
+	background: var(--color-headings);
+	color: #fff;
+}
+
+.btn--primary {
+	background: var(--color-primary);
+	color: #fff;
+}
+
+.btn--primary:hover {
+	background: #006fff;
+}
+
+.btn--secondary {
+	background: var(--color-secondary);
+	color: #fff;
+}
+
+.btn--secondary:hover {
+	background: #10ceef;
+}
+
+.btn--accent {
+	background: var(--color-accent);
+	color: #fff;
+}
+
+.btn--accent:hover {
+	background: #ec3000;
+}
+
+.btn--stretched {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.btn--block {
+	width: 100%;
+	display: inline-block;
+}
+
+@media screen and (min-width: 450px) {
+	.btn {
+		font-size: 1.8rem;
+	}
+
+	.btn--stretched {
+		padding-left: 6rem;
+		padding-right: 6rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.btn {
+		font-size: 1.6rem;
+	}
+}
