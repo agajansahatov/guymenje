@@ -39,3 +39,22 @@ a:visited,
 a:active {
 	outline: none;
 }
+
+/* Grids */
+.grid {
+	display: grid;
+}
+
+@media screen and (min-width: 768px) {
+	.grid--1x2 {
+		/* Divide into 2 and give each child 1 slice */
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.grid--1x3 {
+		/* Divide into 2 and give each child 1 slice */
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
