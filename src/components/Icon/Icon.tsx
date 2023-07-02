@@ -1,24 +1,29 @@
 import styles from "./Icon.module.css";
-import icons from "../../assets/icons.svg";
+import Icons from "../../assets/icons.svg";
 
 interface Props {
-	type: string;
-	color: string;
-	container: boolean;
-	classes: string;
+	backgroundColor?: "accent" | "dark";
+	color: "primary" | "accent" | "white";
+	container?: true;
+	size?: "small";
+	name: string;
 }
 
-const Icon = ({ classes, type, color, container }: Props) => {
+const Icon = ({ backgroundColor, color, container, size, name }: Props) => {
+	let classNames = [styles["icon"], styles[`icon--${color}`]];
+	if (size) classNames.push(styles["icon--small"]);
+
 	const icon = (
-		<svg
-			className={[styles["icon"], styles[`icon--${color}`], classes].join(" ")}>
-			<use xlinkHref={`${icons}#${type}`}></use>
+		<svg className={classNames.join(" ")}>
+			<use xlinkHref={`${Icons}#${name}`}></use>
 		</svg>
 	);
 
 	if (!container) return icon;
-
-	return <span className={styles["icon-container"]}>{icon}</span>;
+	classNames = [styles["icon-container"]];
+	if (backgroundColor)
+		classNames.push(styles["icon-container--" + backgroundColor]);
+	return <span className={classNames.join(" ")}>{icon}</span>;
 };
 
 export default Icon;

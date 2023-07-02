@@ -1,5 +1,5 @@
 import styles from "./ArrowLink.module.css";
-import sprite from "../../assets/icons.svg";
+import Icons from "../../assets/icons.svg";
 import { ReactNode } from "react";
 
 interface Props {
@@ -12,7 +12,7 @@ const ArrowLink = ({ href, children, target = "_self" }: Props) => {
 		<a href={href} className={styles["link-arrow"]} target={target}>
 			{children}
 			<svg className={styles["icon"]}>
-				<use xlinkHref={`${sprite}#arrow-right`}></use>
+				<use xlinkHref={`${Icons}#arrow-right`}></use>
 			</svg>
 		</a>
 	);

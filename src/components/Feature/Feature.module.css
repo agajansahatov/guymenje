@@ -1,0 +1,35 @@
+.feature {
+	gap: 4rem 2rem;
+	margin: 12rem 0;
+}
+
+.feature:first-of-type {
+	margin-top: 6rem;
+}
+
+.feature:last-of-type {
+	margin-bottom: 6rem;
+}
+
+.feature__heading {
+	margin: 1rem 0;
+}
+
+.feature__image-container {
+	display: block;
+	align-self: center;
+}
+
+.feature__image {
+	border-radius: 10px;
+}
+
+.feature__image-container > .feature__image {
+	border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.feature:nth-of-type(even) .feature__content {
+		order: 2;
+	}
+}
