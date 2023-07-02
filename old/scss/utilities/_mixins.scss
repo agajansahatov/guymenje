@@ -1,7 +1,0 @@
-@use "./variables" as *;
-
-@mixin breakpoint($size) {
-	@media screen and (min-width: map-get($breakpoints, $size)) {
-		@content;
-	}
-}
