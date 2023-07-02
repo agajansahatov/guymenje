@@ -7,6 +7,7 @@ interface Props {
 	container?: true;
 	size?: "small";
 	name: string;
+	className?: string;
 }
 
 const Icon = ({ backgroundColor, color, container, size, name }: Props) => {

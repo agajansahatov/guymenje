@@ -1,20 +1,23 @@
+import { ReactNode } from "react";
 import styles from "./Media.module.css";
-import Icons from "../../assets/icons.svg";
 
-const Media = () => {
+interface Props {
+	image: ReactNode;
+	title: ReactNode;
+	titleStyles?: string;
+	children: ReactNode;
+}
+
+const Media = ({ children, image, title, titleStyles }: Props) => {
+	let titleClassNames = [styles["media__title"]];
+	if (titleStyles) titleClassNames.push(titleStyles);
+
 	return (
 		<div className={styles["media"]}>
-			<div className={styles["media__image"]}>
-				<svg className={[styles["icon"], styles["icon--primary"]].join(" ")}>
-					<use xlinkHref={Icons + "#clock"}></use>
-				</svg>
-			</div>
+			<div className={styles["media__image"]}>{image}</div>
 			<div className={styles["media__body"]}>
-				<h3 className={styles["media__title"]}>The Media Component</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, id ab!
-					Iusto error eius laboriosam modi provident corrupti, culpa eos?
-				</p>
+				<h3 className={titleClassNames.join(" ")}>{title}</h3>
+				{children}
 			</div>
 		</div>
 	);
