@@ -1,0 +1,35 @@
+.banner {
+	min-height: fit-content;
+	display: flex;
+	align-items: center;
+}
+
+.banner__tagline {
+	color: #b9c3cf;
+	letter-spacing: 1px;
+	margin: 2rem 0 4rem;
+}
+
+.banner__image {
+	margin-top: 5rem;
+}
+
+.banner__content {
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	.banner__content {
+		text-align: left;
+	}
+
+	.banner__image {
+		margin-top: 1rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.banner {
+		min-height: 96vh;
+	}
+}
