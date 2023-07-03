@@ -3,6 +3,7 @@ import Quote from "./../Quote";
 import Icon from "./../Icon";
 import Picture from "./../Picture";
 import { ICustomer } from "../../services/customers";
+import IconContainer from "./../Icon/IconContainer";
 
 interface Props {
 	customers: ICustomer[];
@@ -16,14 +17,11 @@ const Testimonial = ({ customers }: Props) => {
 			<div className="grid grid--1x2">
 				<div className={styles["testimonial__image-container"]}>
 					<Picture src={photo} alt="A happy, smiling customer" />
-					<Icon
-						name="quotes"
-						container={true}
-						backgroundColor="accent"
-						color="white"
-						size="small"
-						containerClassName={styles["testimonial__icon-container"]}
-					/>
+					<IconContainer
+						className={styles["testimonial__icon-container"]}
+						color="accent">
+						<Icon name="quotes" color="white" size="small" />
+					</IconContainer>
 				</div>
 				<Quote author={name} company={company}>
 					{comment}
