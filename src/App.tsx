@@ -1,13 +1,8 @@
-import Banner from "./sections/Banner";
-import Navbar from "./components/Navbar";
+import Testimonial from "./components/Testimonial";
+import { getCustomers } from "./services/customers";
 
 const App = () => {
-	return (
-		<>
-			<Navbar />
-			<Banner />
-		</>
-	);
+	return <Testimonial customers={getCustomers()} />;
 };
 
 export default App;

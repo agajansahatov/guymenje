@@ -8,9 +8,17 @@ interface Props {
 	size?: "small";
 	name: string;
 	className?: string;
+	containerClassName?: string;
 }
 
-const Icon = ({ backgroundColor, color, container, size, name }: Props) => {
+const Icon = ({
+	backgroundColor,
+	color,
+	container,
+	containerClassName,
+	size,
+	name,
+}: Props) => {
 	let classNames = [styles["icon"], styles[`icon--${color}`]];
 	if (size) classNames.push(styles["icon--small"]);
 
@@ -24,6 +32,7 @@ const Icon = ({ backgroundColor, color, container, size, name }: Props) => {
 	classNames = [styles["icon-container"]];
 	if (backgroundColor)
 		classNames.push(styles["icon-container--" + backgroundColor]);
+	if (containerClassName) classNames.push(containerClassName);
 	return <span className={classNames.join(" ")}>{icon}</span>;
 };
 
