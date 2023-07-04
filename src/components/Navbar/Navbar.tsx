@@ -8,16 +8,15 @@ const Navbar = () => {
 
 	return (
 		<nav>
-			<Collapsible classes={styles["navbar"]} isHidden={true}>
+			<Collapsible className={styles["navbar"]} isHidden={true}>
 				<a aria-label="Güýmenje" className={styles["nav__header"]} href="/">
 					<img className={styles["nav__logo"]} src={logo} alt="" />
 				</a>
 				<span>
 					<Icon
-						type="toggler"
+						name="toggler"
 						color="white"
-						container={false}
-						classes={styles["nav__toggler"]}
+						className={styles["nav__toggler"]}
 					/>
 				</span>
 				<ul className={"list " + styles["nav__list"]}>

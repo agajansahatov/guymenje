@@ -8,7 +8,7 @@ import React, {
 import "./Collapsible.css";
 
 interface Props {
-	classes: string;
+	className: string;
 	isHidden: boolean;
 	children: ReactNode[];
 }
@@ -18,24 +18,24 @@ interface Props {
 	children[2] => Anything you want to show in the expanded mode
 */
 
-const Collapsible: React.FC<Props> = ({ classes, isHidden, children }) => {
+const Collapsible: React.FC<Props> = ({ className, isHidden, children }) => {
 	const [isExpanded, setExpanded] = useState(!isHidden);
 
 	const handleToggle = () => {
 		setExpanded(!isExpanded);
 	};
 
-	let style = [classes, "collapsible"];
+	let style = [className, "collapsible"];
 	if (isExpanded) {
 		style.push("collapsible--expanded");
 	}
 
 	const toggler = React.Children.map(children[1], (child) => {
 		if (isValidElement(child)) {
-			const existingClasses = child.props.className || "";
+			const existingclassName = child.props.className || "";
 
 			return cloneElement(child as ReactElement, {
-				className: [existingClasses, "collapsible__toggler"].join(" "),
+				className: [existingclassName, "collapsible__toggler"].join(" "),
 				onClick: handleToggle,
 			});
 		}
@@ -44,10 +44,10 @@ const Collapsible: React.FC<Props> = ({ classes, isHidden, children }) => {
 
 	const collapsibleContent = React.Children.map(children[2], (child) => {
 		if (isValidElement(child)) {
-			const existingClasses = child.props.className || "";
+			const existingclassName = child.props.className || "";
 
 			return cloneElement(child as ReactElement, {
-				className: [existingClasses, "collapsible__content"].join(" "),
+				className: [existingclassName, "collapsible__content"].join(" "),
 			});
 		}
 		return child;

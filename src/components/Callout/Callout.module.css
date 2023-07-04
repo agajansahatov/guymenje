@@ -1,0 +1,111 @@
+.callout {
+	padding: 4rem;
+	border-radius: 0;
+	transform: translateY(5rem);
+}
+
+.callout--primary {
+	background: var(--color-primary);
+	color: #fff;
+}
+
+.callout__heading {
+	color: #fff;
+	margin-top: 0;
+	font-size: 3rem;
+}
+
+.callout__toggler {
+	justify-self: center;
+	align-self: center;
+}
+
+:global(.collapsible--expanded) .callout__toggler {
+	box-shadow: 0 0 0 4px #87edff;
+	transition: all 0.4s;
+}
+
+.callout__content {
+	display: block;
+	text-align: center;
+}
+
+.contact-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.contact-info__header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3rem;
+	margin-bottom: 0;
+	overflow: hidden;
+}
+
+.contact-info__heading {
+	margin: 0 0 0.5rem 0;
+	padding: 0 2rem;
+	display: block;
+	text-align: center;
+}
+
+.contact-type {
+	width: 64px;
+	height: 64px;
+	border-radius: 10px;
+	margin: 1rem;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background: inherit;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.contact-type:hover {
+	background: rgba(68, 68, 68, 0.3);
+}
+
+.contact-type:hover .icon {
+	transform: scale(1.1);
+	transition: all 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+	.callout {
+		border-radius: 5px;
+	}
+
+	.callout :global(.grid--1x2) {
+		grid-template-columns: 1fr auto;
+	}
+
+	.callout__content {
+		text-align: left;
+		padding-right: 5rem;
+	}
+
+	.callout__toggler {
+		justify-self: start;
+		margin: 0 0 0 1.5rem;
+	}
+
+	.contact-type {
+		margin: 1rem 2.5rem;
+	}
+
+	.contact-info {
+		grid-column: 1/3;
+	}
+
+	.contact-info__heading {
+		font-size: 2.3rem;
+	}
+}

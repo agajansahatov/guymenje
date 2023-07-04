@@ -1,8 +1,7 @@
-import Testimonial from "./components/Testimonial";
-import { getCustomers } from "./services/customers";
+import Callout from "./components/Callout";
 
 const App = () => {
-	return <Testimonial customers={getCustomers()} />;
+	return <Callout />;
 };
 
 export default App;

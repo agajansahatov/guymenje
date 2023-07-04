@@ -3,6 +3,7 @@ import styles from "./Button.module.css";
 
 interface Props {
 	children: ReactNode;
+	className?: string;
 	color?: "primary" | "secondary" | "accent" | "outline";
 	style?: "normal" | "block" | "stretched";
 	type: "button" | "link";
@@ -13,6 +14,7 @@ interface Props {
 
 const Button = ({
 	children,
+	className,
 	color = "primary",
 	style,
 	type,
@@ -22,6 +24,7 @@ const Button = ({
 }: Props) => {
 	let classNames = [styles["btn"], styles["btn--" + color]];
 	if (style && style !== "normal") classNames.push(styles["btn--" + style]);
+	if (className) classNames.push(className);
 
 	if (type === "link") {
 		return (
