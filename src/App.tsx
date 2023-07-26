@@ -1,7 +1,7 @@
-import Callout from "./components/Callout";
+import Expertise from "./sections/Expertise";
 
 const App = () => {
-	return <Callout />;
+	return <Expertise />;
 };
 
 export default App;

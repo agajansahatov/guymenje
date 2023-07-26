@@ -4,7 +4,7 @@ import styles from "./Icon.module.css";
 interface Props {
 	color?: "accent" | "dark";
 	children: ReactNode;
-	className: string;
+	className?: string;
 }
 
 const IconContainer = ({ color, children, className }: Props) => {

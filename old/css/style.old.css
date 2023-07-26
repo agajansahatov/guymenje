@@ -108,16 +108,6 @@
 	}
 }
 
-/* Expertise section */
-.expertise > .grid {
-	margin-top: 6rem;
-}
-
-/* Scroll To Top Button */
-html {
-	scroll-behavior: smooth;
-}
-
 .scroll-to-top {
 	--btnWidth: 64px;
 	--btnHeight: 64px;
