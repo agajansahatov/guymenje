@@ -1,7 +1,7 @@
-import Expertise from "./sections/Expertise";
+import Footer from "./sections/Footer";
 
 const App = () => {
-	return <Expertise />;
+	return <Footer />;
 };
 
 export default App;

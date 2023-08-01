@@ -8,7 +8,7 @@ import React, {
 import "./Collapsible.css";
 
 interface Props {
-	className: string;
+	className?: string;
 	isHidden: boolean;
 	children: ReactNode[];
 }
