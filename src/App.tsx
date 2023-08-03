@@ -1,7 +1,7 @@
-import Footer from "./sections/Footer";
+import Devices from "./sections/Devices";
 
 const App = () => {
-	return <Footer />;
+	return <Devices />;
 };
 
 export default App;
