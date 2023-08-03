@@ -1,7 +1,7 @@
-import Testimonials from "./sections/Testimonials";
+import Home from "./pages/Home";
 
 const App = () => {
-	return <Testimonials />;
+	return <Home />;
 };
 
 export default App;

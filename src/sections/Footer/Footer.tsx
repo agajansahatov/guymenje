@@ -27,8 +27,7 @@ const footerLinks = [
 		header: "COMPANY",
 		links: [
 			{ link: "#", label: "Home" },
-			{ link: "#", label: "About" },
-			{ link: "#", label: "Contact Us" },
+			{ link: "#", label: "Founder" },
 			{ link: "#", label: "Why Choose Us?" },
 		],
 	},

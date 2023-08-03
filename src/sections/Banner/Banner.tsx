@@ -1,7 +1,6 @@
 import BlockHeader from "../../components/Block/BlockHeader";
 import Block from "../../components/Block";
 import Button from "./../../components/Button/Button";
-import BannerImage from "../../assets/images/banner.svg";
 import styles from "./Banner.module.css";
 
 const Banner = () => {
@@ -24,7 +23,11 @@ const Banner = () => {
 						</Button>
 					</div>
 				</BlockHeader>
-				<img className={styles["banner__image"]} src={BannerImage} alt="" />
+				<img
+					className={styles["banner__image"]}
+					src="/images/banner.svg"
+					alt=""
+				/>
 			</article>
 		</Block>
 	);

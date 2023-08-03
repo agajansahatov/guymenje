@@ -1,7 +1,7 @@
 /* Footer */
 .footer {
 	background: #1d1d1d;
-	padding-top: 10rem;
+	padding-top: 12rem;
 	padding-bottom: 8.5rem;
 }
 
@@ -105,7 +105,7 @@
 		border: 0;
 	}
 
-	.footer__article .list {
+	.footer__article :global(.list) {
 		font-size: 1.8rem;
 	}
 
