@@ -1,12 +1,12 @@
 //Sizes attribute of img element can be added
 interface Props {
-	alt: string;
+	alt?: string;
 	className?: string;
 	src: string;
 	type?: "regular" | "multi-source";
 }
 
-const Picture = ({ alt, className = "", src, type }: Props) => {
+const Picture = ({ alt = "", className = "", src, type }: Props) => {
 	const extensionIndex = src.lastIndexOf(".") + 1;
 	const extension = src.substring(extensionIndex);
 	const url = src.substring(0, extensionIndex - 1);

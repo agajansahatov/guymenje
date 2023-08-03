@@ -1,7 +1,7 @@
-import Devices from "./sections/Devices";
+import Features from "./sections/Features";
 
 const App = () => {
-	return <Devices />;
+	return <Features />;
 };
 
 export default App;
