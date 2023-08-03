@@ -7,7 +7,7 @@ const features = [
 		heading: "WEB Development",
 		iconName: "web",
 		imageUrl: "/images/web.svg",
-		link: "",
+		link: "#",
 		content:
 			"We create beautiful, responsive and incredibly fast websites and web apps. From planning to design and development – our goal is to build high-performing and award-winning websites. Get a perfect website to start or to keep your business moving forward with our help.",
 	},

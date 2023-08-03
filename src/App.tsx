@@ -1,7 +1,7 @@
-import Features from "./sections/Features";
+import Showcase from "./sections/Showcase";
 
 const App = () => {
-	return <Features />;
+	return <Showcase />;
 };
 
 export default App;
