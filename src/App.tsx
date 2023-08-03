@@ -1,7 +1,7 @@
-import Showcase from "./sections/Showcase";
+import Testimonials from "./sections/Testimonials";
 
 const App = () => {
-	return <Showcase />;
+	return <Testimonials />;
 };
 
 export default App;

@@ -1,5 +1,3 @@
-import Meylis from "../assets/images/meylis.png";
-
 export interface ICustomer {
 	comment: string;
 	company: string;
@@ -10,7 +8,7 @@ export interface ICustomer {
 let customers: ICustomer[] = [
 	{
 		name: "Meylis Sahetmammedov",
-		photo: Meylis,
+		photo: "/images/meylis.png",
 		company: "Entrepreneur",
 		comment:
 			"I am so happy to recommend Agajan Sahatov and his company. They delivered an excellent website (a landing page), which is very beautiful, responsive and blazingly fast. The team is very professional, easy to work with and has good results.",
