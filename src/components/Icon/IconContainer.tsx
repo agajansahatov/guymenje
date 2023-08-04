@@ -8,7 +8,7 @@ interface Props {
 }
 
 const IconContainer = ({ color, children, className }: Props) => {
-	let classNames = [styles["icon-container"]];
+	let classNames = ["icon-container"];
 	if (color) classNames.push(styles["icon-container--" + color]);
 	if (className) classNames.push(className);
 

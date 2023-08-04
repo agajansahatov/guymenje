@@ -6,6 +6,7 @@ import Features from "../sections/Features";
 import Footer from "../sections/Footer";
 import Showcase from "../sections/Showcase";
 import Testimonials from "../sections/Testimonials";
+import ScrollToTopBtn from "./../components/ScrollToTopBtn/index";
 
 const Home = () => {
 	return (
@@ -22,6 +23,7 @@ const Home = () => {
 				<Contact />
 			</main>
 			<footer>
+				<ScrollToTopBtn />
 				<Footer />
 			</footer>
 		</>

@@ -24,14 +24,14 @@
 	opacity: 1;
 }
 
-.scroll-to-top > .icon-container {
+.scroll-to-top > :global(.icon-container) {
 	--iconWidth: calc(var(--btnWidth) - 8px);
 	--iconHeight: calc(var(--btnHeight) - 8px);
 	background-color: #393939;
 }
 
 @media screen and (min-width: 400px) {
-	.scroll-to-top > .icon-container {
+	.scroll-to-top > :global(.icon-container) {
 		--iconWidth: calc(var(--btnWidth) - 8px - 12px);
 		--iconHeight: calc(var(--btnHeight) - 8px - 12px);
 	}

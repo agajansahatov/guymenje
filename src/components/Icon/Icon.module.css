@@ -1,4 +1,4 @@
-.icon-container {
+:global(.icon-container) {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -40,7 +40,7 @@
 }
 
 @media screen and (min-width: 400px) {
-	.icon-container {
+	:global(.icon-container) {
 		width: calc(var(--iconWidth) + 12px);
 		height: calc(var(--iconHeight) + 12px);
 	}
