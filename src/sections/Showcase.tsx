@@ -45,10 +45,14 @@ const showCases = [
 	},
 ];
 
-const Showcase = () => {
+interface Props {
+	useAOS: boolean;
+}
+
+const Showcase = ({ useAOS }: Props) => {
 	return (
 		<Block>
-			<BlockHeader>
+			<BlockHeader dataAos={useAOS ? "fade-up" : ""}>
 				<h2>Why People Choose Us?</h2>
 				<p>
 					Our clients love how we always strive to fulfill their core needs.
@@ -61,7 +65,10 @@ const Showcase = () => {
 					iconName={sCase.iconName}
 					imageUrl={sCase.imageUrl}
 					link={sCase.link}
-					key={index}>
+					key={index}
+					dataAos={
+						useAOS ? (index % 2 === 0 ? "fade-up-right" : "fade-up-left") : ""
+					}>
 					{sCase.content}
 				</Feature>
 			))}

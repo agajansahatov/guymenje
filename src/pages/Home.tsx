@@ -7,8 +7,15 @@ import Footer from "../sections/Footer";
 import Showcase from "../sections/Showcase";
 import Testimonials from "../sections/Testimonials";
 import ScrollToTopBtn from "./../components/ScrollToTopBtn/index";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Home = () => {
+	useEffect(() => {
+		AOS.init({ duration: 850 });
+	}, []);
+
 	return (
 		<>
 			<header>
@@ -16,10 +23,10 @@ const Home = () => {
 				<Banner />
 			</header>
 			<main>
-				<Features />
+				<Features useAOS={true} />
 				<Expertise />
-				<Showcase />
-				<Testimonials />
+				<Showcase useAOS={true} />
+				<Testimonials useAOS={true} />
 				<Contact />
 			</main>
 			<footer>

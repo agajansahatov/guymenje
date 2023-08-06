@@ -7,13 +7,20 @@ import IconContainer from "./../Icon/IconContainer";
 
 interface Props {
 	customers: ICustomer[];
+	dataAos?: string;
 }
 
 // Need to implement this component for multiple users
-const Testimonial = ({ customers }: Props) => {
+const Testimonial = ({ customers, dataAos = "" }: Props) => {
 	const { name, photo, company, comment } = customers[0];
+	const AosAttributes = dataAos
+		? { "data-aos": dataAos, "data-aos-duration": 1000 }
+		: {};
+
 	return (
-		<div className={[styles["card"], styles["testimonial"]].join(" ")}>
+		<div
+			className={[styles["card"], styles["testimonial"]].join(" ")}
+			{...AosAttributes}>
 			<div className="grid grid--1x2">
 				<div className={styles["testimonial__image-container"]}>
 					<Picture src={photo} alt="A happy, smiling customer" />

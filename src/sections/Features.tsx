@@ -37,10 +37,14 @@ const features = [
 	},
 ];
 
-const Features = () => {
+interface Props {
+	useAOS: boolean;
+}
+
+const Features = ({ useAOS }: Props) => {
 	return (
 		<Block>
-			<BlockHeader>
+			<BlockHeader dataAos={useAOS ? "fade-up" : ""}>
 				<h2>Get your apps built for any device</h2>
 				<p>
 					You've got the idea, we've got the expertise. From a wide variety of
@@ -56,7 +60,10 @@ const Features = () => {
 					iconName={feature.iconName}
 					imageUrl={feature.imageUrl}
 					link={feature.link}
-					key={index}>
+					key={index}
+					dataAos={
+						useAOS ? (index % 2 === 0 ? "fade-up-right" : "fade-up-left") : ""
+					}>
 					{feature.content}
 				</Feature>
 			))}
