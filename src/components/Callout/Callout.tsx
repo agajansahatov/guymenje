@@ -2,12 +2,31 @@ import styles from "./Callout.module.css";
 import Collapsible from "./../Collapsible/index";
 import Icon from "./../Icon/index";
 import Button from "./../Button/Button";
-
-function showContactInfo(label: string, strCopy: string) {
-	window.alert(`${label}: ${strCopy}`);
-}
+import ClipboardJS from "clipboard";
 
 const Callout = () => {
+	const showContactInfo = async (label: string, strCopy: string) => {
+		let status = "Failed to copy.\nYou can copy it manually!";
+		if (ClipboardJS.isSupported()) {
+			await new Promise<void>((resolve, reject) => {
+				const clipboard = new ClipboardJS(".copy-btn", {
+					text: () => strCopy,
+				});
+				clipboard.on("success", () => {
+					status = "Successfully copied to clipboard!";
+					clipboard.destroy();
+					resolve();
+				});
+				clipboard.on("error", () => {
+					clipboard.destroy();
+					reject();
+				});
+			});
+		}
+
+		window.alert(`${label}: ${strCopy}.\n${status}`);
+	};
+
 	return (
 		<div className={[styles["callout"], styles["callout--primary"]].join(" ")}>
 			<Collapsible isHidden={true} className="grid grid--1x2">
@@ -40,7 +59,7 @@ const Callout = () => {
 						<Icon name="email" color="white" className={styles["icon"]} />
 					</a>
 					<button
-						className={styles["contact-type"]}
+						className={styles["contact-type"] + " copy-btn"}
 						onClick={() => showContactInfo("Phone", "+86 132 5940 0802")}>
 						<Icon name="call" color="white" className={styles["icon"]} />
 					</button>
@@ -69,12 +88,12 @@ const Callout = () => {
 						<Icon name="linkedin" color="white" className={styles["icon"]} />
 					</a>
 					<button
-						className={styles["contact-type"]}
+						className={styles["contact-type"] + " copy-btn"}
 						onClick={() => showContactInfo("Whatsapp", "+86 132 5940 0802")}>
 						<Icon name="whatsapp" color="white" className={styles["icon"]} />
 					</button>
 					<button
-						className={styles["contact-type"]}
+						className={styles["contact-type"] + " copy-btn"}
 						onClick={() => showContactInfo("Wechat ID", "agajansahatov")}>
 						<Icon name="wechat" color="white" className={styles["icon"]} />
 					</button>
