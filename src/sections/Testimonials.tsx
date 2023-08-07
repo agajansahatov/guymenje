@@ -7,11 +7,18 @@ interface Props {
 	headingBody: string;
 	customers: ICustomer[];
 	useAOS: boolean;
+	id?: string;
 }
 
-const Testimonials = ({ heading, headingBody, customers, useAOS }: Props) => {
+const Testimonials = ({
+	heading,
+	headingBody,
+	customers,
+	useAOS,
+	id,
+}: Props) => {
 	return (
-		<Block>
+		<Block id={id}>
 			<BlockHeader dataAos={useAOS ? "fade-up" : ""}>
 				<h2>{heading}</h2>
 				<p>{headingBody}</p>

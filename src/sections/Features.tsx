@@ -8,11 +8,12 @@ interface Props {
 	headingBody: string;
 	features: IFeature[];
 	useAOS: boolean;
+	id?: string;
 }
 
-const Features = ({ heading, headingBody, features, useAOS }: Props) => {
+const Features = ({ heading, headingBody, features, useAOS, id }: Props) => {
 	return (
-		<Block>
+		<Block id={id}>
 			<BlockHeader dataAos={useAOS ? "fade-up" : ""}>
 				<h2>{heading}</h2>
 				<p>{headingBody}</p>

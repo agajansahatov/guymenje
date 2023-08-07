@@ -8,11 +8,12 @@ import { IExpertise } from "../../interfaces";
 interface Props {
 	expertises: IExpertise[];
 	heading: string;
+	id?: string;
 }
 
-const Expertise = ({ expertises, heading }: Props) => {
+const Expertise = ({ expertises, heading, id }: Props) => {
 	return (
-		<Block color="dark" direction="right">
+		<Block color="dark" direction="right" id={id}>
 			<BlockHeader>
 				<h2>{heading}</h2>
 			</BlockHeader>

@@ -4,7 +4,24 @@ import Collapsible from "../Collapsible";
 import Icon from "./../Icon";
 
 const Navbar = () => {
-	const navItems = ["Services", "Our Expertise", "Projects", "About Us"];
+	const navItems = [
+		{
+			label: "Services",
+			link: "#section-services",
+		},
+		{
+			label: "Our Expertise",
+			link: "#section-expertise",
+		},
+		{
+			label: "Projects",
+			link: "https://github.com/Agajan-Sahatov?tab=repositories",
+		},
+		{
+			label: "About Us",
+			link: "#section-showcase",
+		},
+	];
 
 	return (
 		<nav>
@@ -20,9 +37,9 @@ const Navbar = () => {
 					/>
 				</span>
 				<ul className={"list " + styles["nav__list"]}>
-					{navItems.map((item: string, index: number) => (
+					{navItems.map((item, index) => (
 						<li className={styles["nav__item"]} key={"nav-item" + index}>
-							<a href="#">{item}</a>
+							<a href={item.link}>{item.label}</a>
 						</li>
 					))}
 				</ul>

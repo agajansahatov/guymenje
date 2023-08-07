@@ -6,15 +6,17 @@ interface Props {
 	headingBody: string;
 	showCases: IShowcase[];
 	useAOS: boolean;
+	id?: string;
 }
 
-const Showcase = ({ heading, headingBody, showCases, useAOS }: Props) => {
+const Showcase = ({ heading, headingBody, showCases, useAOS, id }: Props) => {
 	return (
 		<Features
 			heading={heading}
 			headingBody={headingBody}
 			features={showCases}
 			useAOS={useAOS}
+			id={id}
 		/>
 	);
 };
