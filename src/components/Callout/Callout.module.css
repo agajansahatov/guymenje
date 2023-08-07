@@ -81,6 +81,7 @@
 @media screen and (min-width: 768px) {
 	.callout {
 		border-radius: 5px;
+		margin: 0 2rem;
 	}
 
 	.callout :global(.grid--1x2) {

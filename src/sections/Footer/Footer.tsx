@@ -14,6 +14,7 @@ const footerLinks = [
 			{ link: "#services3", label: "Mobile Apps", target: "_self" },
 			{ link: "#services4", label: "Cross-Platform Apps", target: "_self" },
 		],
+		isHidden: false,
 	},
 	{
 		header: "PROJECTS",
@@ -34,6 +35,7 @@ const footerLinks = [
 				target: "_blank",
 			},
 		],
+		isHidden: true,
 	},
 	{
 		header: "COMPANY",
@@ -46,6 +48,7 @@ const footerLinks = [
 			},
 			{ link: "#section-showcase", label: "Why Choose Us?", target: "_self" },
 		],
+		isHidden: true,
 	},
 ];
 
@@ -55,7 +58,9 @@ const Footer = () => {
 			<div className={"grid " + styles["footer__articles"]}>
 				{footerLinks.map((footerLink, index) => (
 					<article key={index}>
-						<Collapsible isHidden={false} className={styles["footer__article"]}>
+						<Collapsible
+							isHidden={footerLink.isHidden}
+							className={styles["footer__article"]}>
 							<h2 className={styles["footer__heading"]}>{footerLink.header}</h2>
 							<div>
 								<IconContainer className={styles["footer__toggler-container"]}>
