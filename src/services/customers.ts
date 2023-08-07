@@ -1,9 +1,4 @@
-export interface ICustomer {
-	comment: string;
-	company: string;
-	name: string;
-	photo: string;
-}
+import { ICustomer } from "../interfaces";
 
 let customers: ICustomer[] = [
 	{

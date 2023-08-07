@@ -1,22 +1,22 @@
 import Block from "../components/Block";
 import BlockHeader from "../components/Block/BlockHeader";
 import Testimonial from "../components/Testimonial";
-import { getCustomers } from "../services/customers";
+import { ICustomer } from "../interfaces";
 interface Props {
+	heading: string;
+	headingBody: string;
+	customers: ICustomer[];
 	useAOS: boolean;
 }
 
-const Testimonials = ({ useAOS }: Props) => {
+const Testimonials = ({ heading, headingBody, customers, useAOS }: Props) => {
 	return (
 		<Block>
 			<BlockHeader dataAos={useAOS ? "fade-up" : ""}>
-				<h2>What our Customers are Saying</h2>
-				<p>We are delighted to have such happy and satisfied customers.</p>
+				<h2>{heading}</h2>
+				<p>{headingBody}</p>
 			</BlockHeader>
-			<Testimonial
-				customers={getCustomers()}
-				dataAos={useAOS ? "fade-up" : ""}
-			/>
+			<Testimonial customers={customers} dataAos={useAOS ? "fade-up" : ""} />
 		</Block>
 	);
 };

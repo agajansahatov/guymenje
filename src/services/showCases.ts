@@ -1,4 +1,6 @@
-const showCases = [
+import { IShowcase } from "../interfaces";
+
+const showCases: IShowcase[] = [
 	{
 		heading: "One Code, Multiple Platforms",
 		iconName: "web",

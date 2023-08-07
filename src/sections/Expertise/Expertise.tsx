@@ -3,14 +3,18 @@ import BlockHeader from "../../components/Block/BlockHeader";
 import Icon from "../../components/Icon";
 import IconContainer from "../../components/Icon/IconContainer";
 import Media from "../../components/Media";
-import { getExpertises } from "../../services/expertises";
+import { IExpertise } from "../../interfaces";
 
-const Expertise = () => {
-	const expertises = getExpertises();
+interface Props {
+	expertises: IExpertise[];
+	heading: string;
+}
+
+const Expertise = ({ expertises, heading }: Props) => {
 	return (
 		<Block color="dark" direction="right">
 			<BlockHeader>
-				<h2>Common Technologies We Use</h2>
+				<h2>{heading}</h2>
 			</BlockHeader>
 			<ul className="list">
 				<div className="container grid grid--1x2">

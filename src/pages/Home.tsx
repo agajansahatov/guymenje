@@ -12,6 +12,8 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { getFeatures } from "../services/features";
 import { getShowCases } from "../services/showCases";
+import { getExpertises } from "../services/expertises";
+import { getCustomers } from "../services/customers";
 
 const Home = () => {
 	useEffect(() => {
@@ -31,14 +33,22 @@ const Home = () => {
 					features={getFeatures()}
 					useAOS={true}
 				/>
-				<Expertise />
+				<Expertise
+					heading="Common Technologies We Use"
+					expertises={getExpertises()}
+				/>
 				<Showcase
 					heading="Why People Choose Us?"
 					headingBody="Our clients love how we always strive to fulfill their core needs. Here is what differentiates us from the rest"
 					showCases={getShowCases()}
 					useAOS={true}
 				/>
-				<Testimonials useAOS={true} />
+				<Testimonials
+					heading="What our Customers are Saying"
+					headingBody="We are delighted to have such happy and satisfied customers."
+					customers={getCustomers()}
+					useAOS={true}
+				/>
 				<Contact />
 			</main>
 			<footer>

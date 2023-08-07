@@ -1,4 +1,6 @@
-const features = [
+import { IFeature } from "../interfaces";
+
+const features: IFeature[] = [
 	{
 		heading: "WEB Development",
 		iconName: "web",

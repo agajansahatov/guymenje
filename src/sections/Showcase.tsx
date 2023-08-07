@@ -1,10 +1,10 @@
-import { IFeature } from "../interfaces";
+import { IShowcase } from "../interfaces";
 import Features from "./Features";
 
 interface Props {
 	heading: string;
 	headingBody: string;
-	showCases: IFeature[];
+	showCases: IShowcase[];
 	useAOS: boolean;
 }
 

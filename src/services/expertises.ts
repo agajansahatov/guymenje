@@ -1,4 +1,6 @@
-const expertises = [
+import { IExpertise } from "../interfaces";
+
+const expertises: IExpertise[] = [
 	{
 		title: "HTML & CSS",
 		icon: "htmlcss",
