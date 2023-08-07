@@ -10,6 +10,8 @@ import ScrollToTopBtn from "./../components/ScrollToTopBtn/index";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { getFeatures } from "../services/features";
+import { getShowCases } from "../services/showCases";
 
 const Home = () => {
 	useEffect(() => {
@@ -23,9 +25,19 @@ const Home = () => {
 				<Banner />
 			</header>
 			<main>
-				<Features useAOS={true} />
+				<Features
+					heading="Get your apps built for any device"
+					headingBody="You've got the idea, we've got the expertise. From a wide variety of frameworks and technologies, our company can help turn your idea into a reality. With constant changes happening in the digital world, it is vital to stay on top of developing technologies. We can make it happen for you."
+					features={getFeatures()}
+					useAOS={true}
+				/>
 				<Expertise />
-				<Showcase useAOS={true} />
+				<Showcase
+					heading="Why People Choose Us?"
+					headingBody="Our clients love how we always strive to fulfill their core needs. Here is what differentiates us from the rest"
+					showCases={getShowCases()}
+					useAOS={true}
+				/>
 				<Testimonials useAOS={true} />
 				<Contact />
 			</main>
