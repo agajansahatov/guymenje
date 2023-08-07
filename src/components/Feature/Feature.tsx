@@ -12,6 +12,7 @@ interface Props {
 	imageUrl: string;
 	link: string;
 	dataAos?: string;
+	id?: string;
 }
 
 const Feature = ({
@@ -21,6 +22,7 @@ const Feature = ({
 	imageUrl,
 	link,
 	dataAos = "",
+	id,
 }: Props) => {
 	const imageExtensionIndex = imageUrl.lastIndexOf(".") + 1;
 	const imageExtension = imageUrl.substring(imageExtensionIndex);
@@ -32,9 +34,10 @@ const Feature = ({
 					dataAos === "fade-up-right" ? "fade-up-left" : "fade-up-right",
 		  }
 		: {};
+	const idAtrr = id ? { id: id } : {};
 
 	return (
-		<article className={"grid grid--1x2 " + styles["feature"]}>
+		<article className={"grid grid--1x2 " + styles["feature"]} {...idAtrr}>
 			<div className={styles["feature__content"]} {...AOSAttributes1}>
 				<IconContainer>
 					<Icon color="primary" name={iconName} />

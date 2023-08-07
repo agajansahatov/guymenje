@@ -26,7 +26,7 @@ const Banner = () => {
 				<img
 					className={styles["banner__image"]}
 					src="/images/banner.svg"
-					alt=""
+					alt="Banner Image"
 				/>
 			</article>
 		</Block>

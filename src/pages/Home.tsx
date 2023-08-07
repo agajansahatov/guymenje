@@ -4,7 +4,6 @@ import Contact from "../sections/Contact/Contact";
 import Expertise from "../sections/Expertise";
 import Features from "../sections/Features";
 import Footer from "../sections/Footer";
-import Showcase from "../sections/Showcase";
 import Testimonials from "../sections/Testimonials";
 import ScrollToTopBtn from "./../components/ScrollToTopBtn/index";
 import AOS from "aos";
@@ -28,6 +27,7 @@ const Home = () => {
 			</header>
 			<main>
 				<Features
+					label="Services"
 					heading="Get your apps built for any device"
 					headingBody="You've got the idea, we've got the expertise. From a wide variety of frameworks and technologies, our company can help turn your idea into a reality. With constant changes happening in the digital world, it is vital to stay on top of developing technologies. We can make it happen for you."
 					features={getFeatures()}
@@ -39,10 +39,11 @@ const Home = () => {
 					expertises={getExpertises()}
 					id="section-expertise"
 				/>
-				<Showcase
+				<Features
+					label="Showcase"
 					heading="Why People Choose Us?"
 					headingBody="Our clients love how we always strive to fulfill their core needs. Here is what differentiates us from the rest"
-					showCases={getShowCases()}
+					features={getShowCases()}
 					useAOS={true}
 					id="section-showcase"
 				/>

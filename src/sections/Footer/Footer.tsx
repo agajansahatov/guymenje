@@ -9,26 +9,42 @@ const footerLinks = [
 	{
 		header: "SERVICES",
 		links: [
-			{ link: "#", label: "Front-End Apps" },
-			{ link: "#", label: "Back-End Apps" },
-			{ link: "#", label: "Mobile Apps" },
-			{ link: "#", label: "Cross-Platform Apps" },
+			{ link: "#services1", label: "Front-End Apps", target: "_self" },
+			{ link: "#services2", label: "Back-End Apps", target: "_self" },
+			{ link: "#services3", label: "Mobile Apps", target: "_self" },
+			{ link: "#services4", label: "Cross-Platform Apps", target: "_self" },
 		],
 	},
 	{
 		header: "PROJECTS",
 		links: [
-			{ link: "#", label: "Admin Panel" },
-			{ link: "#", label: "Sozluk" },
-			{ link: "#", label: "Landing Page" },
+			{
+				link: "https://www.instagram.com/p/CsZptdLyFkk/?img_index=1",
+				label: "Admin Panel",
+				target: "_blank",
+			},
+			{
+				link: "https://www.instagram.com/p/CsVddjDupMw/?img_index=1",
+				label: "Sozluk",
+				target: "_blank",
+			},
+			{
+				link: "https://www.instagram.com/p/CsY7aKcP5d0/",
+				label: "Landing Page",
+				target: "_blank",
+			},
 		],
 	},
 	{
 		header: "COMPANY",
 		links: [
-			{ link: "#", label: "Home" },
-			{ link: "#", label: "Founder" },
-			{ link: "#", label: "Why Choose Us?" },
+			{ link: "/", label: "Home", target: "_self" },
+			{
+				link: "https://www.instagram.com/agajansahatov/",
+				label: "Founder",
+				target: "_blank",
+			},
+			{ link: "#section-showcase", label: "Why Choose Us?", target: "_self" },
 		],
 	},
 ];
@@ -53,7 +69,9 @@ const Footer = () => {
 							<ul className="list">
 								{footerLink.links.map((link, i) => (
 									<li key={i}>
-										<a href={link.link}>{link.label}</a>
+										<a href={link.link} target={link.target}>
+											{link.label}
+										</a>
 									</li>
 								))}
 							</ul>

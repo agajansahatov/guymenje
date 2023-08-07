@@ -9,9 +9,17 @@ interface Props {
 	features: IFeature[];
 	useAOS: boolean;
 	id?: string;
+	label: string;
 }
 
-const Features = ({ heading, headingBody, features, useAOS, id }: Props) => {
+const Features = ({
+	heading,
+	headingBody,
+	features,
+	useAOS,
+	id,
+	label,
+}: Props) => {
 	return (
 		<Block id={id}>
 			<BlockHeader dataAos={useAOS ? "fade-up" : ""}>
@@ -27,7 +35,8 @@ const Features = ({ heading, headingBody, features, useAOS, id }: Props) => {
 					key={index}
 					dataAos={
 						useAOS ? (index % 2 === 0 ? "fade-up-right" : "fade-up-left") : ""
-					}>
+					}
+					id={`${label.toLowerCase()}${index + 1}`}>
 					{feature.content}
 				</Feature>
 			))}
