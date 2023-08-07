@@ -42,7 +42,7 @@ const Home = () => {
 				<Features
 					label="Showcase"
 					heading="Why People Choose Us?"
-					headingBody="Our clients love how we always strive to fulfill their core needs. Here is what differentiates us from the rest"
+					headingBody="Our clients love how we always strive to fulfill their core needs. Here is what differentiates us from the rest."
 					features={getShowCases()}
 					useAOS={true}
 					id="section-showcase"
@@ -52,6 +52,7 @@ const Home = () => {
 					headingBody="We are delighted to have such happy and satisfied customers."
 					customers={getCustomers()}
 					useAOS={true}
+					id="section-testimonials"
 				/>
 				<Contact />
 			</main>

@@ -2,7 +2,7 @@ import styles from "./Testimonial.module.css";
 import Quote from "./../Quote";
 import Icon from "./../Icon";
 import Picture from "./../Picture";
-import { ICustomer } from "../../services/customers";
+import { ICustomer } from "../../interfaces";
 import IconContainer from "./../Icon/IconContainer";
 
 interface Props {

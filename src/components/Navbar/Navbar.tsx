@@ -8,18 +8,22 @@ const Navbar = () => {
 		{
 			label: "Services",
 			link: "#section-services",
+			target: "_self",
 		},
 		{
 			label: "Our Expertise",
 			link: "#section-expertise",
+			target: "_self",
 		},
 		{
 			label: "Projects",
 			link: "https://github.com/Agajan-Sahatov?tab=repositories",
+			target: "_blank",
 		},
 		{
 			label: "About Us",
 			link: "#section-showcase",
+			target: "_self",
 		},
 	];
 
@@ -39,7 +43,9 @@ const Navbar = () => {
 				<ul className={"list " + styles["nav__list"]}>
 					{navItems.map((item, index) => (
 						<li className={styles["nav__item"]} key={"nav-item" + index}>
-							<a href={item.link}>{item.label}</a>
+							<a href={item.link} target={item.target}>
+								{item.label}
+							</a>
 						</li>
 					))}
 				</ul>
