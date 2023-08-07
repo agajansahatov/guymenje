@@ -5,6 +5,3 @@
     max-age=63072000;
     includeSubDomains;
     preload'''
-
-[build]
-  command = "npm run build && cp build/index.html dist/"
